@@ -1,0 +1,8 @@
+
+§%squid:RedundantThrowsDeclarationCheck"lRemove the declaration of thrown exception 'java.io.IOException', as it cannot be thrown from method's body.(Ôþ‰Àýÿÿÿÿ8û™½å‘,
+ssquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(‡ÇÇÝýÿÿÿÿ
+esquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(º­ç³ùÿÿÿÿ
+Ysquid:CallToDeprecatedMethod"3Remove this use of "description"; it is deprecated.(™„ªˆ
+Å%squid:RedundantThrowsDeclarationCheck"‰Remove the declaration of thrown exception 'org.apache.solr.client.solrj.SolrServerException', as it cannot be thrown from method's body.(Ôþ‰Àýÿÿÿÿ8û™½å‘,
+_squid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ÝÊâa
+ssquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(Ñ·Ðîúÿÿÿÿ

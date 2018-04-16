@@ -1,0 +1,8 @@
+
+[squid:UselessImportCheck"-Remove this unused import 'java.util.Arrays'.(î–˜Éüÿÿÿÿ8¢‚è‘,
+vsquid:UselessImportCheck"HRemove this unused import 'java.lang.reflect.InvocationTargetException'.(è¾†„øÿÿÿÿ8Ø¦Âç‘,
+Ysquid:UselessImportCheck"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8ÿÔç‘,
+]squid:UselessImportCheck"4Remove this unused import 'java.lang.reflect.Array'.(‡¡É˜8ö¥Üç‘,
+bsquid:S1126"AReplace this if-then-else statement by a single return statement.(µ¦æ®ûÿÿÿÿ8¢‚è‘,
+Tsquid:UselessImportCheck"+Remove this unused import 'java.util.Date'.(¸…¼ü8ÿÔç‘,
+Usquid:HiddenFieldCheck"5Rename "t" which hides the field declared at line 33.(ˆ©œ
