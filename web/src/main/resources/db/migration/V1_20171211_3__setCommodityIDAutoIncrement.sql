@@ -1,0 +1,5 @@
+ALTER TABLE `t_commodity`
+MODIFY COLUMN `t_id`  int(12) NOT NULL AUTO_INCREMENT FIRST ;
+
+ALTER TABLE `t_commodityclassifyinfo`
+MODIFY COLUMN `t_id`  int(12) NOT NULL AUTO_INCREMENT FIRST ;

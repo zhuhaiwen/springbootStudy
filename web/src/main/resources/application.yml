@@ -1,0 +1,70 @@
+# application settings
+drap:
+  api:
+    # API接口url前缀
+    base-path: /api
+  cache:
+    expire:
+      # 是否启动
+      duration: -1
+      # 触发器时间
+      maximumSize: -1
+# 配置端口号以及访问路径
+server:
+  port: 10002
+  context-path: /
+  tomcat:
+    uri-encoding: UTF-8
+
+# 配置视图(即界面路径)
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp
+  datasource: # 配置数据源
+    url: jdbc:mysql://localhost:3306/localstudy?characterEncoding=UTF-8
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: root
+  jpa:
+    show-sql: true
+    hibernate:
+      naming:
+        strategy: org.hibernate.cfg.ImprovedNamingStrategy
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+  http:
+    encoding:
+      force: true
+      charset: UTF-8
+      enabled: true
+  # 配置redis
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    timeout: 0
+    database: 0
+    pool:
+      max-idle: 20
+      min-idle: 1
+      max-active: 20
+      max-wait: 60000
+  application:
+    name: publish
+  cache:
+    type: redis
+  data:
+    solr:
+      host: http://127.0.0.1:8983/solr
+# 配置flyway
+flyway:
+  baseline-on-migrate: true
+  encoding: UTF-8
+# 配置那个控制器不需要输出logger
+#logging:
+#  level:
+#   控制器名: 'OFF'
+
+

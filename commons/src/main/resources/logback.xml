@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration debug="false">
+    <include resource="org/springframework/boot/logging/logback/defaults.xml" />
+    <!--定义日志文件的存储地址,勿在LogBack的配置中使用相对路径-->
+    <!--<property name="LOG_FILE" value="${LOG_FILE:-${LOG_PATH:-${LOG_TEMP:-${java.io.tmpdir:-/tmp}}/}spring.log}"/>-->
+    <!--%d{HH:mm:ss.SSS}——日志输出时间
+        %thread——输出日志的进程名字，这在Web应用以及异步任务处理中很有用
+        %-5level——日志级别，并且使用5个字符靠左对齐
+        %logger{36}——日志输出者的名字
+        %msg——日志消息
+        %n——平台换行符
+    -->
+    <include resource="org/springframework/boot/logging/logback/file-appender.xml" />
+
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>${CONSOLE_LOG_PATTERN}</pattern><!--默认的-->
+            <!--<Pattern>.%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg %n</Pattern>--><!--等同于${CONSOLE_LOG_PATTERN}-->
+            <!--<charset>utf8</charset>-->
+        </encoder>
+    </appender>
+
+    <!--按照每天生成日志文件-->
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!--日志文件输出的文件名-->
+            <fileNamePattern>%d{yyyy-MM-dd}.log</fileNamePattern><!--直接在项目根目录下-->
+            <!--日志文件保留天数-->
+            <MaxHistory>30</MaxHistory>
+        </rollingPolicy>
+        <encoder>
+            <pattern>${CONSOLE_LOG_PATTERN}</pattern><!--默认的-->
+            <!--<charset>utf8</charset>-->
+        </encoder>
+        <triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+            <MaxFileSize>10MB</MaxFileSize>
+        </triggeringPolicy>
+    </appender>
+
+    <root level="INFO">
+        <appender-ref ref="CONSOLE" />
+        <appender-ref ref="FILE" />
+    </root>
+
+    <jmxConfigurator/>
+</configuration>

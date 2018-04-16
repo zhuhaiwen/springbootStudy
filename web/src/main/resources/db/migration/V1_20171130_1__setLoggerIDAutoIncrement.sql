@@ -1,0 +1,2 @@
+ALTER TABLE `t_logger_infos`
+MODIFY COLUMN `id`  int(12) NOT NULL AUTO_INCREMENT FIRST ;
