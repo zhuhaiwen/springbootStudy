@@ -1,17 +1,8 @@
 package com.founder.utils.solr.solrutil;
 
-import org.apache.commons.lang3.reflect.MethodUtils;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageImpl;
-import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.solr.core.query.*;
-import org.springframework.data.solr.core.query.result.HighlightEntry;
-import org.springframework.data.solr.core.query.result.HighlightPage;
-import org.springframework.data.solr.core.query.result.ScoredPage;
 import org.springframework.stereotype.Component;
-
-import java.lang.reflect.InvocationTargetException;
 
 /**
  * @author zhwen
@@ -76,6 +67,6 @@ public class SolrHelper {
      * @return
      */
     public static HighlightQuery highlightQuery(Query query) {
-        return SimpleQuery.fromQuery(query, new SimpleHighlightQuery());
+        return SimpleQuery.fromQuery(query, new SimpleHighlightQuery( ));
     }
 }
