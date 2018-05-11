@@ -1,0 +1,12 @@
+.settings
+.project
+.classpath
+*/bin/
+.metadata/
+mryx_log
+target
+*.rej
+.idea/
+*.iml
+*/.idea/
+*/*.iml
