@@ -44,15 +44,6 @@ public class SwaggerConfig {
             }
         };
 
-        /*Predicate<RequestHandler> predicate = new Predicate<RequestHandler>() {
-            @Override
-            public boolean apply(RequestHandler input) {
-                Class<?> declaringClass = input.declaringClass();
-                if (declaringClass == BasicErrorController.class)// 排除
-                    return false;
-                return true;
-            }
-        };*/
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(apiInfo())
                 /*.select()
