@@ -23,6 +23,7 @@ public class GlobalExceptionHandler {
     public ErrorInfo<String> errorHandler (HttpServletRequest request, HttpServletResponse response, MyException e) throws Exception {
         ErrorInfo<String> errorInfo = new ErrorInfo<>();
         errorInfo.setMessage(e.getMessage());
+        // TODO: 2018/5/14 此处还可以根据status的值来自定义异常返回信息，比如在当前errorinfo的基础上再添加别的信息
         errorInfo.setCode(response.getStatus());
         errorInfo.setData("somedata");
         errorInfo.setUrl(request.getRequestURL().toString());

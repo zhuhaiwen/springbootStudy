@@ -1,6 +1,8 @@
 package com.founder.utils.globalexception;
 
 /**
+ * 统一异常信息
+ *
  * @author zhuhw
  * @date 2018/5/11 16:40
  */
