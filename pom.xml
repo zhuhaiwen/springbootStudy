@@ -215,6 +215,35 @@
         </dependencies>
     </dependencyManagement>
 
+    <profiles>
+
+        <!--开发环境-->
+        <profile>
+            <id>dev</id>
+            <properties>
+                <profileActive>dev</profileActive>
+            </properties>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+        </profile>
+
+        <!--测试环境-->
+        <profile>
+            <id>test</id>
+            <properties>
+                <profileActive>test</profileActive>
+            </properties>
+        </profile>
+
+        <!--开发环境-->
+        <profile>
+            <id>product</id>
+            <properties>
+                <profileActive>product</profileActive>
+            </properties>
+        </profile>
+    </profiles>
     <build>
         <pluginManagement>
             <plugins>
