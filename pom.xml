@@ -205,6 +205,13 @@
                 <version>${spring.serurity.version}</version>
             </dependency>
 
+            <!--spring-data-mongodb-->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-data-mongodb</artifactId>
+                <version>${springboot.version}</version>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 
