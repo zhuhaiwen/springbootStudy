@@ -1,8 +1,11 @@
 package com.founder.aop;
 
-import org.aspectj.lang.ProceedingJoinPoint;
-import org.aspectj.lang.annotation.Around;
+import org.aspectj.lang.annotation.AfterReturning;
 import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Before;
+import org.aspectj.lang.annotation.Pointcut;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
 import java.lang.annotation.ElementType;
@@ -28,38 +31,17 @@ public @interface Action {
 @Aspect
 @Component
 class ActionAop {
-    /*@Before(value = "execution(* com.founder.controller.*.*Api.*(..))")
-    public void before (JoinPoint joinPoint) {
-        System.out.println("方法执行前...");
-        System.out.println("目标方法名为：" + joinPoint.getSignature().getName());
-        System.out.println("目标方法所属类的简单名类为：" + joinPoint.getSignature().getDeclaringType().getSimpleName());
-        System.out.println("目标方法所属类的类名为：" + joinPoint.getSignature().getDeclaringTypeName());
-        System.out.println("目标方法声明类型:" + Modifier.toString(joinPoint.getSignature().getModifiers()));
-        //获取传入目标方法的参数
-        Object[] args = joinPoint.getArgs();
-        for (int i = 0; i < args.length; i++) {
-            System.out.println("第" + (i+1) + "个参数为:" + args[i]);
-        }
-        System.out.println("被代理的对象:" + joinPoint.getTarget());
-        System.out.println("代理对象自己:" + joinPoint.getThis());
 
-    }
+    private Logger logger = LoggerFactory.getLogger(ActionAop.class);
 
-    @After(value = "execution(* com.founder.controller.*.*Api.*(..))")
-    public void after (JoinPoint joinPoint) {
-        System.out.println("方法执行完毕...");
-    }*/
-
-    @Around(value = "execution(* com.founder.controller.*.*Api.*(..)) && @annotation(aDoc)")
+    /**
+     * @Around的用法,@Around相当于@before与@returnning
+     * @param proceedingJoinPoint
+     * @param aDoc
+     * @return
+     */
+    /*@Around(value = "execution(* com.founder.controller.*.*Api.*(..)) && @annotation(aDoc)")
     public Object around (ProceedingJoinPoint proceedingJoinPoint, Action aDoc) {
-        /*System.out.println("方法执行前1...");
-        List<TUserEntity> result = new ArrayList<TUserEntity>();
-        try {
-            result = (List<TUserEntity>) proceedingJoinPoint.proceed(new Object[]{50});
-        } catch (Throwable throwable) {
-            throwable.printStackTrace();
-        }
-        return result;*/
         Object result = null;
         try {
             System.out.println("前置通知");
@@ -69,9 +51,25 @@ class ActionAop {
         catch (Throwable e) {
             e.printStackTrace();
         }
-
         return result;
+    }*/
+
+    /**
+     * 定义一个切入点，所谓切入点就是执行切面的地方,再通俗一点就是将要被执行方法的切点
+     */
+    @Pointcut(value = "execution(* com.founder.controller.*.*Api.*(..))")
+    public void webLog(){
+        logger.info("我是");
     }
 
+    @Before("webLog()")
+    public void doBefore(){
+        logger.info("执行之前的操作");
+    }
 
+    @AfterReturning(returning = "ret", pointcut = "webLog()")
+    public void afterReturning (Object ret){
+        System.out.println(ret);
+        logger.info("执行之后的操作");
+    }
 }
