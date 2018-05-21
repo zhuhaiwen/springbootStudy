@@ -6,7 +6,7 @@
 	<groupId>com.founder</groupId>
 	<artifactId>web</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+	<packaging>war</packaging>
 
 	<name>web</name>
 	<description>Demo project for Spring Boot</description>
@@ -70,10 +70,47 @@
 	</dependencies>
 
 	<build>
+		<finalName>moreModule</finalName>
+		<resources>
+			<!--首先指定resources资源文件夹的都是资源文件-->
+			<resource>
+				<directory>src/main/resources</directory>
+				<!--之所以排除这些资源文件，是为了按需加载，不同的环境只需要一个资源文件-->
+				<excludes>
+					<exclude>application-dev.yml</exclude>
+					<exclude>application-test.yml</exclude>
+					<exclude>application-product.yml</exclude>
+					<exclude>application.yml</exclude>
+				</excludes>
+			</resource>
+
+			<resource>
+				<filtering>true</filtering>
+				<directory>src/main/resources</directory>
+				<!--设定不同环境下的资源文件-->
+				<includes>
+					<include>application-${profileActive}.yml</include>
+					<include>application.yml</include>
+					<include>*.properties</include>
+				</includes>
+			</resource>
+
+		</resources>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<mainClass>com.founder.WebApplication</mainClass>
+					<layout>ZIP</layout>
+				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>repackage</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
 		</plugins>
 	</build>
