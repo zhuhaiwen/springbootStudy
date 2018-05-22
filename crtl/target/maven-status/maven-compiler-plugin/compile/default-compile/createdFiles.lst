@@ -2,6 +2,7 @@ com\founder\entity\user\TUserEntity_.class
 com\founder\service\impl\UserServiceImpl.class
 com\founder\controller\commodity\CommodityApi.class
 com\founder\aop\ActionAop.class
+com\founder\controller\GlobalExceptionApi.class
 com\founder\entity\log\TLoggerInfosEntity.class
 com\founder\service\impl\UserServiceImpl$1.class
 com\founder\aop\Action.class

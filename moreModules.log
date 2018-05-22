@@ -1,0 +1,400 @@
+2018-05-21 18:28:52.063 [main] [] [] INFO  com.founder.WebApplication - Starting WebApplication on ZGC-20171223KJP with PID 8616 (E:\workspace\moreModule\web\target\classes started by Administrator in E:\workspace\moreModule)
+2018-05-21 18:28:52.067 [main] [] [] INFO  com.founder.WebApplication - The following profiles are active: dev
+2018-05-21 18:28:52.171 [main] [] [] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3da05287: startup date [Mon May 21 18:28:52 CST 2018]; root of context hierarchy
+2018-05-21 18:28:53.240 [background-preinit] [] [] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.3.5.Final
+2018-05-21 18:28:54.975 [main] [] [] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-05-21 18:28:55.305 [main] [] [] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-05-21 18:28:55.362 [main] [] [] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.founder.dao.user.IUserDao.
+2018-05-21 18:28:55.363 [main] [] [] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.founder.dao.commodity.TCommdityDao.
+2018-05-21 18:28:55.372 [main] [] [] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.founder.utils.solr.dao.SolrDao.
+2018-05-21 18:28:55.373 [main] [] [] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.founder.dao.log.TLogDao.
+2018-05-21 18:28:55.391 [main] [] [] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-05-21 18:28:55.447 [main] [] [] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.founder.dao.user.IUserDao.
+2018-05-21 18:28:55.448 [main] [] [] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.founder.dao.commodity.TCommdityDao.
+2018-05-21 18:28:55.449 [main] [] [] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.founder.utils.solr.dao.SolrDao.
+2018-05-21 18:28:55.450 [main] [] [] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.founder.dao.log.TLogDao.
+2018-05-21 18:28:55.469 [main] [] [] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-05-21 18:28:55.505 [main] [] [] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Solr - Could not safely identify store assignment for repository candidate interface com.founder.dao.user.IUserDao.
+2018-05-21 18:28:55.508 [main] [] [] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Solr - Could not safely identify store assignment for repository candidate interface com.founder.dao.commodity.TCommdityDao.
+2018-05-21 18:28:55.510 [main] [] [] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Solr - Could not safely identify store assignment for repository candidate interface com.founder.dao.log.TLogDao.
+2018-05-21 18:28:56.754 [main] [] [] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cache.annotation.ProxyCachingConfiguration' of type [org.springframework.cache.annotation.ProxyCachingConfiguration$$EnhancerBySpringCGLIB$$5b7be8f8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-21 18:28:56.906 [main] [] [] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration' of type [org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration$$EnhancerBySpringCGLIB$$4fefad9c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-21 18:28:56.944 [main] [] [] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration' of type [org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration$$EnhancerBySpringCGLIB$$3ce34a44] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-21 18:28:56.953 [main] [] [] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'stringOrNumberMigrationVersionConverter' of type [org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration$StringOrNumberToMigrationVersionConverter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-21 18:28:56.972 [main] [] [] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'spring.cache-org.springframework.boot.autoconfigure.cache.CacheProperties' of type [org.springframework.boot.autoconfigure.cache.CacheProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-21 18:28:57.003 [main] [] [] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'cacheManagerCustomizers' of type [org.springframework.boot.autoconfigure.cache.CacheManagerCustomizers] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-21 18:28:57.009 [main] [] [] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.cache.RedisCacheConfiguration' of type [org.springframework.boot.autoconfigure.cache.RedisCacheConfiguration$$EnhancerBySpringCGLIB$$8149f6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-21 18:28:57.025 [main] [] [] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'cacheConfiguration' of type [com.founder.redis.CacheConfiguration$$EnhancerBySpringCGLIB$$35fbb9d2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-21 18:28:57.056 [main] [] [] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'spring.redis-org.springframework.boot.autoconfigure.data.redis.RedisProperties' of type [org.springframework.boot.autoconfigure.data.redis.RedisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-21 18:28:57.066 [main] [] [] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration$RedisConnectionConfiguration' of type [org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration$RedisConnectionConfiguration$$EnhancerBySpringCGLIB$$a663d9e9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-21 18:28:57.129 [main] [] [] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redisConnectionFactory' of type [org.springframework.data.redis.connection.jedis.JedisConnectionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-21 18:28:57.189 [main] [] [] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redisTemplate' of type [org.springframework.data.redis.core.RedisTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-21 18:28:57.249 [main] [] [] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'cacheManager' of type [org.springframework.data.redis.cache.RedisCacheManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-21 18:28:57.253 [main] [] [] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'cacheAutoConfigurationValidator' of type [org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration$CacheManagerValidator] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-21 18:28:57.302 [main] [] [] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$1269b2da] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-21 18:28:58.471 [main] [] [] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 10002 (http)
+2018-05-21 18:28:58.500 [main] [] [] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2018-05-21 18:28:58.502 [main] [] [] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.16
+2018-05-21 18:28:59.052 [localhost-startStop-1] [] [] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2018-05-21 18:28:59.059 [localhost-startStop-1] [] [] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2018-05-21 18:28:59.059 [localhost-startStop-1] [] [] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 6888 ms
+2018-05-21 18:28:59.424 [localhost-startStop-1] [] [] INFO  o.s.b.w.s.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+2018-05-21 18:28:59.431 [localhost-startStop-1] [] [] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-05-21 18:28:59.432 [localhost-startStop-1] [] [] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-05-21 18:28:59.432 [localhost-startStop-1] [] [] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-05-21 18:28:59.433 [localhost-startStop-1] [] [] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2018-05-21 18:28:59.921 [main] [] [] INFO  o.f.c.internal.util.VersionPrinter - Flyway 4.0.3 by Boxfuse
+2018-05-21 18:29:00.366 [main] [] [] INFO  o.f.c.i.dbsupport.DbSupportFactory - Database: jdbc:mysql://localhost:3306/localstudy?characterEncoding=UTF-8 (MySQL 5.1)
+2018-05-21 18:29:00.448 [main] [] [] INFO  o.f.core.internal.command.DbValidate - Successfully validated 11 migrations (execution time 00:00.035s)
+2018-05-21 18:29:00.499 [main] [] [] INFO  o.f.core.internal.command.DbMigrate - Current version of schema `localstudy`: 1.20171211.3
+2018-05-21 18:29:00.501 [main] [] [] INFO  o.f.core.internal.command.DbMigrate - Schema `localstudy` is up to date. No migration necessary.
+2018-05-21 18:29:00.700 [main] [] [] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'primaryPersistenceUnit'
+2018-05-21 18:29:00.726 [main] [] [] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: primaryPersistenceUnit
+	...]
+2018-05-21 18:29:00.840 [main] [] [] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.0.12.Final}
+2018-05-21 18:29:00.842 [main] [] [] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2018-05-21 18:29:00.844 [main] [] [] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+2018-05-21 18:29:00.909 [main] [] [] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-05-21 18:29:01.110 [main] [] [] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2018-05-21 18:29:02.008 [main] [] [] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'primaryPersistenceUnit'
+2018-05-21 18:29:04.589 [main] [] [] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/user/listAllCommodityByType],methods=[GET],produces=[application/json;charset=UTF-8]}" onto public java.util.List<com.founder.entity.commodity.TCommodityEntity> com.founder.controller.commodity.CommodityApi.list()
+2018-05-21 18:29:04.591 [main] [] [] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/exception/getDiyException],methods=[GET],produces=[application/json;charset=UTF-8]}" onto public java.lang.String com.founder.controller.GlobalExceptionApi.getDiyException() throws com.founder.utils.globalexception.MyException
+2018-05-21 18:29:04.593 [main] [] [] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/user/getUsersByAge],methods=[GET],produces=[application/json;charset=UTF-8]}" onto public java.util.List<com.founder.entity.user.TUserEntity> com.founder.controller.user.UserApi.getUsersByAge(int)
+2018-05-21 18:29:04.594 [main] [] [] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/user/add],methods=[GET],produces=[application/json;charset=UTF-8]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.founder.controller.user.UserApi.saveUser(com.founder.entity.user.TUserEntity) throws java.io.IOException,org.apache.solr.client.solrj.SolrServerException
+2018-05-21 18:29:04.594 [main] [] [] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/user/getUsersByPageable],methods=[GET],produces=[application/json;charset=UTF-8]}" onto public org.springframework.data.domain.Page<com.founder.entity.user.TUserEntity> com.founder.controller.user.UserApi.getUsersByPageable(java.lang.String,org.springframework.data.domain.Pageable)
+2018-05-21 18:29:04.596 [main] [] [] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/user/login],methods=[GET],produces=[application/json;charset=UTF-8]}" onto public java.lang.String com.founder.controller.user.UserCtrl.userLogin(com.founder.entity.user.TUserEntity,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException
+2018-05-21 18:29:04.596 [main] [] [] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/user/listAllUsers],methods=[GET],produces=[application/json;charset=UTF-8]}" onto public java.util.List<com.founder.entity.user.TUserEntity> com.founder.controller.user.UserCtrl.listAllUsers()
+2018-05-21 18:29:04.597 [main] [] [] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/user/login_view],methods=[GET],produces=[application/json;charset=UTF-8]}" onto public java.lang.String com.founder.controller.user.UserCtrl.loginView()
+2018-05-21 18:29:04.597 [main] [] [] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/user/index],methods=[GET],produces=[application/json;charset=UTF-8]}" onto public java.lang.String com.founder.controller.user.UserCtrl.loginSuccess(com.founder.entity.user.TUserEntity,javax.servlet.http.HttpServletRequest)
+2018-05-21 18:29:04.598 [main] [] [] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/solr/searchForPageByName],methods=[GET],produces=[application/json;charset=UTF-8]}" onto public org.springframework.data.domain.Page<com.founder.utils.solr.doc.QueryDoc> com.founder.utils.solr.controller.SolrApi.findByName(java.lang.String,org.springframework.data.domain.Pageable)
+2018-05-21 18:29:04.599 [main] [] [] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/solr/deleteAllIndexs],methods=[GET],produces=[application/json;charset=UTF-8]}" onto public void com.founder.utils.solr.controller.SolrApi.deleteAllIndexs()
+2018-05-21 18:29:04.599 [main] [] [] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+2018-05-21 18:29:04.602 [main] [] [] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2018-05-21 18:29:04.604 [main] [] [] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2018-05-21 18:29:04.605 [main] [] [] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2018-05-21 18:29:04.613 [main] [] [] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-05-21 18:29:04.613 [main] [] [] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-05-21 18:29:05.844 [main] [] [] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3da05287: startup date [Mon May 21 18:28:52 CST 2018]; root of context hierarchy
+2018-05-21 18:29:05.944 [main] [] [] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/moreModule/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-21 18:29:05.945 [main] [] [] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-21 18:29:05.945 [main] [] [] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-21 18:29:05.968 [main] [] [] INFO  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Detected @ExceptionHandler methods in globalExceptionHandler
+2018-05-21 18:29:06.010 [main] [] [] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-21 18:29:06.638 [main] [] [] INFO  org.mongodb.driver.cluster - Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2018-05-21 18:29:07.442 [main] [] [] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2018-05-21 18:29:07.453 [main] [] [] INFO  o.s.c.s.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+2018-05-21 18:29:07.454 [main] [] [] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2018-05-21 18:29:07.485 [main] [] [] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2018-05-21 18:29:07.510 [main] [] [] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2018-05-21 18:29:07.756 [cluster-ClusterId{value='5b029f72adf0d221a8aa14d5', description='null'}-localhost:27017] [] [] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server localhost:27017
+com.mongodb.MongoSocketOpenException: Exception opening socket
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:63)
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:115)
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:113)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at com.mongodb.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:57)
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:58)
+	... 3 common frames omitted
+2018-05-21 18:29:08.036 [main] [] [] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-10002"]
+2018-05-21 18:29:08.058 [main] [] [] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-10002"]
+2018-05-21 18:29:08.083 [main] [] [] INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2018-05-21 18:29:08.147 [main] [] [] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat started on port(s): 10002 (http)
+2018-05-21 18:29:08.156 [main] [] [] INFO  com.founder.WebApplication - Started WebApplication in 16.968 seconds (JVM running for 18.093)
+2018-05-21 18:59:41.083 [main] [] [] INFO  com.founder.WebApplication - Starting WebApplication on ZGC-20171223KJP with PID 4156 (E:\workspace\moreModule\web\target\classes started by Administrator in E:\workspace\moreModule)
+2018-05-21 18:59:41.087 [main] [] [] INFO  com.founder.WebApplication - The following profiles are active: dev
+2018-05-21 18:59:41.218 [main] [] [] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3da05287: startup date [Mon May 21 18:59:41 CST 2018]; root of context hierarchy
+2018-05-21 18:59:42.738 [background-preinit] [] [] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.3.5.Final
+2018-05-21 18:59:43.859 [main] [] [] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-05-21 18:59:44.162 [main] [] [] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-05-21 18:59:44.229 [main] [] [] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.founder.dao.user.IUserDao.
+2018-05-21 18:59:44.231 [main] [] [] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.founder.dao.commodity.TCommdityDao.
+2018-05-21 18:59:44.236 [main] [] [] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.founder.utils.solr.dao.SolrDao.
+2018-05-21 18:59:44.237 [main] [] [] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.founder.dao.log.TLogDao.
+2018-05-21 18:59:44.251 [main] [] [] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-05-21 18:59:44.302 [main] [] [] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.founder.dao.user.IUserDao.
+2018-05-21 18:59:44.303 [main] [] [] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.founder.dao.commodity.TCommdityDao.
+2018-05-21 18:59:44.304 [main] [] [] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.founder.utils.solr.dao.SolrDao.
+2018-05-21 18:59:44.305 [main] [] [] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.founder.dao.log.TLogDao.
+2018-05-21 18:59:44.329 [main] [] [] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-05-21 18:59:44.375 [main] [] [] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Solr - Could not safely identify store assignment for repository candidate interface com.founder.dao.user.IUserDao.
+2018-05-21 18:59:44.376 [main] [] [] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Solr - Could not safely identify store assignment for repository candidate interface com.founder.dao.commodity.TCommdityDao.
+2018-05-21 18:59:44.377 [main] [] [] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Solr - Could not safely identify store assignment for repository candidate interface com.founder.dao.log.TLogDao.
+2018-05-21 18:59:45.346 [main] [] [] WARN  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'objectMapperConfigurer' defined in class path resource [springfox/documentation/spring/web/SpringfoxWebMvcConfiguration.class]: BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.cache.annotation.ProxyCachingConfiguration': BeanPostProcessor before instantiation of bean failed; nested exception is java.lang.IllegalArgumentException: ProceedingJoinPoint is only supported for around advice
+2018-05-21 18:59:45.349 [main] [] [] ERROR o.s.b.f.s.DefaultListableBeanFactory - Destroy method on bean with name 'org.springframework.context.annotation.internalScheduledAnnotationProcessor' threw an exception
+java.lang.IllegalStateException: ApplicationEventMulticaster not initialized - call 'refresh' before multicasting events via the context: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3da05287: startup date [Mon May 21 18:59:41 CST 2018]; root of context hierarchy
+	at org.springframework.context.support.AbstractApplicationContext.getApplicationEventMulticaster(AbstractApplicationContext.java:414)
+	at org.springframework.context.support.ApplicationListenerDetector.postProcessBeforeDestruction(ApplicationListenerDetector.java:97)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:253)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:578)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:554)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:961)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:523)
+	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.destroySingletons(FactoryBeanRegistrySupport.java:230)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:968)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1030)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:556)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107)
+	at com.founder.WebApplication.main(WebApplication.java:18)
+2018-05-21 18:59:45.350 [main] [] [] ERROR o.s.b.f.s.DefaultListableBeanFactory - Destroy method on bean with name 'org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor' threw an exception
+java.lang.IllegalStateException: ApplicationEventMulticaster not initialized - call 'refresh' before multicasting events via the context: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3da05287: startup date [Mon May 21 18:59:41 CST 2018]; root of context hierarchy
+	at org.springframework.context.support.AbstractApplicationContext.getApplicationEventMulticaster(AbstractApplicationContext.java:414)
+	at org.springframework.context.support.ApplicationListenerDetector.postProcessBeforeDestruction(ApplicationListenerDetector.java:97)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:253)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:578)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:554)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:961)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:523)
+	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.destroySingletons(FactoryBeanRegistrySupport.java:230)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:968)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1030)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:556)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107)
+	at com.founder.WebApplication.main(WebApplication.java:18)
+2018-05-21 18:59:45.354 [main] [] [] ERROR o.s.b.f.s.DefaultListableBeanFactory - Destroy method on bean with name 'org.springframework.boot.autoconfigure.internalCachingMetadataReaderFactory' threw an exception
+java.lang.IllegalStateException: ApplicationEventMulticaster not initialized - call 'refresh' before multicasting events via the context: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3da05287: startup date [Mon May 21 18:59:41 CST 2018]; root of context hierarchy
+	at org.springframework.context.support.AbstractApplicationContext.getApplicationEventMulticaster(AbstractApplicationContext.java:414)
+	at org.springframework.context.support.ApplicationListenerDetector.postProcessBeforeDestruction(ApplicationListenerDetector.java:97)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:253)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:578)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:554)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:961)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:523)
+	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.destroySingletons(FactoryBeanRegistrySupport.java:230)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:968)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1030)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:556)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107)
+	at com.founder.WebApplication.main(WebApplication.java:18)
+2018-05-21 18:59:45.366 [main] [] [] INFO  o.s.b.a.l.AutoConfigurationReportLoggingInitializer - 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2018-05-21 18:59:45.372 [main] [] [] ERROR o.s.boot.SpringApplication - Application startup failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'objectMapperConfigurer' defined in class path resource [springfox/documentation/spring/web/SpringfoxWebMvcConfiguration.class]: BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.cache.annotation.ProxyCachingConfiguration': BeanPostProcessor before instantiation of bean failed; nested exception is java.lang.IllegalArgumentException: ProceedingJoinPoint is only supported for around advice
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:479)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.registerBeanPostProcessors(PostProcessorRegistrationDelegate.java:235)
+	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:703)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:528)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107)
+	at com.founder.WebApplication.main(WebApplication.java:18)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.cache.annotation.ProxyCachingConfiguration': BeanPostProcessor before instantiation of bean failed; nested exception is java.lang.IllegalArgumentException: ProceedingJoinPoint is only supported for around advice
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:479)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:372)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1173)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1067)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:513)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.aop.framework.autoproxy.BeanFactoryAdvisorRetrievalHelper.findAdvisorBeans(BeanFactoryAdvisorRetrievalHelper.java:92)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findCandidateAdvisors(AbstractAdvisorAutoProxyCreator.java:102)
+	at org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator.findCandidateAdvisors(AnnotationAwareAspectJAutoProxyCreator.java:88)
+	at org.springframework.aop.aspectj.autoproxy.AspectJAwareAdvisorAutoProxyCreator.shouldSkip(AspectJAwareAdvisorAutoProxyCreator.java:103)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessBeforeInstantiation(AbstractAutoProxyCreator.java:248)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1037)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1011)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:473)
+	... 14 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.cache.annotation.ProxyCachingConfiguration': BeanPostProcessor before instantiation of bean failed; nested exception is java.lang.IllegalArgumentException: ProceedingJoinPoint is only supported for around advice
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:479)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:372)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1173)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1067)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:513)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.aop.framework.autoproxy.BeanFactoryAdvisorRetrievalHelper.findAdvisorBeans(BeanFactoryAdvisorRetrievalHelper.java:92)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findCandidateAdvisors(AbstractAdvisorAutoProxyCreator.java:102)
+	at org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator.findCandidateAdvisors(AnnotationAwareAspectJAutoProxyCreator.java:88)
+	at org.springframework.aop.aspectj.autoproxy.AspectJAwareAdvisorAutoProxyCreator.shouldSkip(AspectJAwareAdvisorAutoProxyCreator.java:103)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessBeforeInstantiation(AbstractAutoProxyCreator.java:248)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1037)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1011)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:473)
+	... 35 common frames omitted
+Caused by: java.lang.IllegalArgumentException: ProceedingJoinPoint is only supported for around advice
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.maybeBindProceedingJoinPoint(AbstractAspectJAdvice.java:405)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.calculateArgumentBindings(AbstractAspectJAdvice.java:377)
+	at org.springframework.aop.aspectj.annotation.ReflectiveAspectJAdvisorFactory.getAdvice(ReflectiveAspectJAdvisorFactory.java:301)
+	at org.springframework.aop.aspectj.annotation.InstantiationModelAwarePointcutAdvisorImpl.instantiateAdvice(InstantiationModelAwarePointcutAdvisorImpl.java:160)
+	at org.springframework.aop.aspectj.annotation.InstantiationModelAwarePointcutAdvisorImpl.<init>(InstantiationModelAwarePointcutAdvisorImpl.java:106)
+	at org.springframework.aop.aspectj.annotation.ReflectiveAspectJAdvisorFactory.getAdvisor(ReflectiveAspectJAdvisorFactory.java:209)
+	at org.springframework.aop.aspectj.annotation.ReflectiveAspectJAdvisorFactory.getAdvisors(ReflectiveAspectJAdvisorFactory.java:136)
+	at org.springframework.aop.aspectj.annotation.BeanFactoryAspectJAdvisorsBuilder.buildAspectJAdvisors(BeanFactoryAspectJAdvisorsBuilder.java:109)
+	at org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator.findCandidateAdvisors(AnnotationAwareAspectJAutoProxyCreator.java:90)
+	at org.springframework.aop.aspectj.autoproxy.AspectJAwareAdvisorAutoProxyCreator.shouldSkip(AspectJAwareAdvisorAutoProxyCreator.java:103)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessBeforeInstantiation(AbstractAutoProxyCreator.java:248)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1037)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1011)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:473)
+	... 56 common frames omitted
+2018-05-21 19:00:10.336 [main] [] [] INFO  com.founder.WebApplication - Starting WebApplication on ZGC-20171223KJP with PID 10688 (E:\workspace\moreModule\web\target\classes started by Administrator in E:\workspace\moreModule)
+2018-05-21 19:00:10.344 [main] [] [] INFO  com.founder.WebApplication - The following profiles are active: dev
+2018-05-21 19:00:10.431 [main] [] [] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3da05287: startup date [Mon May 21 19:00:10 CST 2018]; root of context hierarchy
+2018-05-21 19:00:11.974 [background-preinit] [] [] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.3.5.Final
+2018-05-21 19:00:12.816 [main] [] [] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-05-21 19:00:13.152 [main] [] [] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-05-21 19:00:13.225 [main] [] [] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.founder.dao.user.IUserDao.
+2018-05-21 19:00:13.226 [main] [] [] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.founder.dao.commodity.TCommdityDao.
+2018-05-21 19:00:13.232 [main] [] [] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.founder.utils.solr.dao.SolrDao.
+2018-05-21 19:00:13.233 [main] [] [] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.founder.dao.log.TLogDao.
+2018-05-21 19:00:13.254 [main] [] [] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-05-21 19:00:13.322 [main] [] [] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.founder.dao.user.IUserDao.
+2018-05-21 19:00:13.323 [main] [] [] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.founder.dao.commodity.TCommdityDao.
+2018-05-21 19:00:13.324 [main] [] [] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.founder.utils.solr.dao.SolrDao.
+2018-05-21 19:00:13.325 [main] [] [] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.founder.dao.log.TLogDao.
+2018-05-21 19:00:13.357 [main] [] [] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-05-21 19:00:13.420 [main] [] [] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Solr - Could not safely identify store assignment for repository candidate interface com.founder.dao.user.IUserDao.
+2018-05-21 19:00:13.421 [main] [] [] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Solr - Could not safely identify store assignment for repository candidate interface com.founder.dao.commodity.TCommdityDao.
+2018-05-21 19:00:13.423 [main] [] [] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Solr - Could not safely identify store assignment for repository candidate interface com.founder.dao.log.TLogDao.
+2018-05-21 19:00:14.608 [main] [] [] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cache.annotation.ProxyCachingConfiguration' of type [org.springframework.cache.annotation.ProxyCachingConfiguration$$EnhancerBySpringCGLIB$$82176fe] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-21 19:00:14.819 [main] [] [] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration' of type [org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration$$EnhancerBySpringCGLIB$$fc953ba2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-21 19:00:14.854 [main] [] [] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration' of type [org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration$$EnhancerBySpringCGLIB$$e988d84a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-21 19:00:14.867 [main] [] [] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'stringOrNumberMigrationVersionConverter' of type [org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration$StringOrNumberToMigrationVersionConverter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-21 19:00:14.886 [main] [] [] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'spring.cache-org.springframework.boot.autoconfigure.cache.CacheProperties' of type [org.springframework.boot.autoconfigure.cache.CacheProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-21 19:00:14.906 [main] [] [] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'cacheManagerCustomizers' of type [org.springframework.boot.autoconfigure.cache.CacheManagerCustomizers] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-21 19:00:14.914 [main] [] [] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.cache.RedisCacheConfiguration' of type [org.springframework.boot.autoconfigure.cache.RedisCacheConfiguration$$EnhancerBySpringCGLIB$$ad26d7fc] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-21 19:00:14.929 [main] [] [] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'cacheConfiguration' of type [com.founder.redis.CacheConfiguration$$EnhancerBySpringCGLIB$$e2a147d8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-21 19:00:14.964 [main] [] [] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'spring.redis-org.springframework.boot.autoconfigure.data.redis.RedisProperties' of type [org.springframework.boot.autoconfigure.data.redis.RedisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-21 19:00:14.983 [main] [] [] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration$RedisConnectionConfiguration' of type [org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration$RedisConnectionConfiguration$$EnhancerBySpringCGLIB$$530967ef] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-21 19:00:15.171 [main] [] [] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redisConnectionFactory' of type [org.springframework.data.redis.connection.jedis.JedisConnectionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-21 19:00:15.275 [main] [] [] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redisTemplate' of type [org.springframework.data.redis.core.RedisTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-21 19:00:15.346 [main] [] [] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'cacheManager' of type [org.springframework.data.redis.cache.RedisCacheManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-21 19:00:15.352 [main] [] [] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'cacheAutoConfigurationValidator' of type [org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration$CacheManagerValidator] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-21 19:00:15.402 [main] [] [] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$bf0f40e0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-21 19:00:16.766 [main] [] [] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 10002 (http)
+2018-05-21 19:00:16.789 [main] [] [] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2018-05-21 19:00:16.791 [main] [] [] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.16
+2018-05-21 19:00:17.424 [localhost-startStop-1] [] [] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2018-05-21 19:00:17.431 [localhost-startStop-1] [] [] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2018-05-21 19:00:17.431 [localhost-startStop-1] [] [] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 7000 ms
+2018-05-21 19:00:17.772 [localhost-startStop-1] [] [] INFO  o.s.b.w.s.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+2018-05-21 19:00:17.781 [localhost-startStop-1] [] [] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-05-21 19:00:17.782 [localhost-startStop-1] [] [] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-05-21 19:00:17.782 [localhost-startStop-1] [] [] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-05-21 19:00:17.782 [localhost-startStop-1] [] [] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2018-05-21 19:00:18.204 [main] [] [] INFO  o.f.c.internal.util.VersionPrinter - Flyway 4.0.3 by Boxfuse
+2018-05-21 19:00:18.681 [main] [] [] INFO  o.f.c.i.dbsupport.DbSupportFactory - Database: jdbc:mysql://localhost:3306/localstudy?characterEncoding=UTF-8 (MySQL 5.1)
+2018-05-21 19:00:18.803 [main] [] [] INFO  o.f.core.internal.command.DbValidate - Successfully validated 11 migrations (execution time 00:00.051s)
+2018-05-21 19:00:18.876 [main] [] [] INFO  o.f.core.internal.command.DbMigrate - Current version of schema `localstudy`: 1.20171211.3
+2018-05-21 19:00:18.879 [main] [] [] INFO  o.f.core.internal.command.DbMigrate - Schema `localstudy` is up to date. No migration necessary.
+2018-05-21 19:00:19.111 [main] [] [] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'primaryPersistenceUnit'
+2018-05-21 19:00:19.138 [main] [] [] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: primaryPersistenceUnit
+	...]
+2018-05-21 19:00:19.259 [main] [] [] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.0.12.Final}
+2018-05-21 19:00:19.269 [main] [] [] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2018-05-21 19:00:19.271 [main] [] [] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+2018-05-21 19:00:19.344 [main] [] [] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-05-21 19:00:19.577 [main] [] [] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2018-05-21 19:00:20.450 [main] [] [] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'primaryPersistenceUnit'
+2018-05-21 19:00:22.699 [main] [] [] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/user/listAllCommodityByType],methods=[GET],produces=[application/json;charset=UTF-8]}" onto public java.util.List<com.founder.entity.commodity.TCommodityEntity> com.founder.controller.commodity.CommodityApi.list()
+2018-05-21 19:00:22.701 [main] [] [] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/exception/getDiyException],methods=[GET],produces=[application/json;charset=UTF-8]}" onto public java.lang.String com.founder.controller.GlobalExceptionApi.getDiyException() throws com.founder.utils.globalexception.MyException
+2018-05-21 19:00:22.704 [main] [] [] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/user/getUsersByAge],methods=[GET],produces=[application/json;charset=UTF-8]}" onto public java.util.List<com.founder.entity.user.TUserEntity> com.founder.controller.user.UserApi.getUsersByAge(int)
+2018-05-21 19:00:22.704 [main] [] [] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/user/add],methods=[GET],produces=[application/json;charset=UTF-8]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.founder.controller.user.UserApi.saveUser(com.founder.entity.user.TUserEntity) throws java.io.IOException,org.apache.solr.client.solrj.SolrServerException
+2018-05-21 19:00:22.704 [main] [] [] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/user/getUsersByPageable],methods=[GET],produces=[application/json;charset=UTF-8]}" onto public org.springframework.data.domain.Page<com.founder.entity.user.TUserEntity> com.founder.controller.user.UserApi.getUsersByPageable(java.lang.String,org.springframework.data.domain.Pageable)
+2018-05-21 19:00:22.708 [main] [] [] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/user/login],methods=[GET],produces=[application/json;charset=UTF-8]}" onto public java.lang.String com.founder.controller.user.UserCtrl.userLogin(com.founder.entity.user.TUserEntity,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException
+2018-05-21 19:00:22.709 [main] [] [] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/user/login_view],methods=[GET],produces=[application/json;charset=UTF-8]}" onto public java.lang.String com.founder.controller.user.UserCtrl.loginView()
+2018-05-21 19:00:22.709 [main] [] [] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/user/listAllUsers],methods=[GET],produces=[application/json;charset=UTF-8]}" onto public java.util.List<com.founder.entity.user.TUserEntity> com.founder.controller.user.UserCtrl.listAllUsers()
+2018-05-21 19:00:22.710 [main] [] [] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/user/index],methods=[GET],produces=[application/json;charset=UTF-8]}" onto public java.lang.String com.founder.controller.user.UserCtrl.loginSuccess(com.founder.entity.user.TUserEntity,javax.servlet.http.HttpServletRequest)
+2018-05-21 19:00:22.711 [main] [] [] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/solr/searchForPageByName],methods=[GET],produces=[application/json;charset=UTF-8]}" onto public org.springframework.data.domain.Page<com.founder.utils.solr.doc.QueryDoc> com.founder.utils.solr.controller.SolrApi.findByName(java.lang.String,org.springframework.data.domain.Pageable)
+2018-05-21 19:00:22.712 [main] [] [] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/solr/deleteAllIndexs],methods=[GET],produces=[application/json;charset=UTF-8]}" onto public void com.founder.utils.solr.controller.SolrApi.deleteAllIndexs()
+2018-05-21 19:00:22.712 [main] [] [] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+2018-05-21 19:00:22.716 [main] [] [] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2018-05-21 19:00:22.717 [main] [] [] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2018-05-21 19:00:22.718 [main] [] [] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2018-05-21 19:00:22.726 [main] [] [] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-05-21 19:00:22.726 [main] [] [] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-05-21 19:00:23.708 [main] [] [] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3da05287: startup date [Mon May 21 19:00:10 CST 2018]; root of context hierarchy
+2018-05-21 19:00:24.314 [main] [] [] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/moreModule/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-21 19:00:24.314 [main] [] [] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-21 19:00:24.314 [main] [] [] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-21 19:00:24.344 [main] [] [] INFO  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Detected @ExceptionHandler methods in globalExceptionHandler
+2018-05-21 19:00:24.393 [main] [] [] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-21 19:00:25.109 [main] [] [] INFO  org.mongodb.driver.cluster - Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2018-05-21 19:00:26.184 [main] [] [] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2018-05-21 19:00:26.198 [main] [] [] INFO  o.s.c.s.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+2018-05-21 19:00:26.198 [main] [] [] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2018-05-21 19:00:26.230 [main] [] [] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2018-05-21 19:00:26.250 [main] [] [] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2018-05-21 19:00:26.283 [cluster-ClusterId{value='5b02a6c9adf0d229c04e82a8', description='null'}-localhost:27017] [] [] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server localhost:27017
+com.mongodb.MongoSocketOpenException: Exception opening socket
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:63)
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:115)
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:113)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at com.mongodb.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:57)
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:58)
+	... 3 common frames omitted
+2018-05-21 19:00:26.790 [main] [] [] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-10002"]
+2018-05-21 19:00:26.814 [main] [] [] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-10002"]
+2018-05-21 19:00:26.852 [main] [] [] INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2018-05-21 19:00:26.926 [main] [] [] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat started on port(s): 10002 (http)
+2018-05-21 19:00:26.937 [main] [] [] INFO  com.founder.WebApplication - Started WebApplication in 17.905 seconds (JVM running for 19.104)
+2018-05-21 19:00:36.454 [http-nio-10002-exec-1] [] [] INFO  o.a.tomcat.util.http.parser.Cookie - A cookie header was received [1525226533,1525330036,1525837178; JSESSIONID=EAA3E29DB2A8D9F38049CCF49C6C652E] that contained an invalid cookie. That cookie will be ignored.Note: further occurrences of this error will be logged at DEBUG level.
+2018-05-21 19:00:36.468 [http-nio-10002-exec-1] [] [] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-05-21 19:00:36.468 [http-nio-10002-exec-1] [] [] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+2018-05-21 19:00:36.523 [http-nio-10002-exec-1] [] [] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 55 ms
+2018-05-21 19:00:36.638 [http-nio-10002-exec-2] [] [] INFO  com.founder.controller.user.UserCtrl - 已经进入登陆方法
+2018-05-21 19:00:39.697 [http-nio-10002-exec-4] [] [] INFO  o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+2018-05-21 19:01:00.115 [http-nio-10002-exec-5] [] [] INFO  com.founder.aop.ActionAop - 执行之前的操作
+2018-05-21 19:01:00.121 [http-nio-10002-exec-5] [] [] INFO  com.founder.controller.user.UserApi - 已经进入查询方法
+2018-05-21 19:01:00.205 [http-nio-10002-exec-5] [] [] INFO  com.founder.aop.ActionAop - 执行之后的操作
+2018-05-21 19:01:17.362 [http-nio-10002-exec-9] [] [] INFO  com.founder.aop.ActionAop - 执行之前的操作
+2018-05-21 19:01:17.362 [http-nio-10002-exec-9] [] [] INFO  com.founder.controller.user.UserApi - 已经进入查询方法
+2018-05-21 19:01:28.009 [http-nio-10002-exec-9] [] [] INFO  com.founder.aop.ActionAop - 执行之后的操作

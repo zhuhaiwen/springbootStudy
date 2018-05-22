@@ -1,6 +1,9 @@
-E:\ownproject\moreModule\web\src\main\java\com\founder\solr\SolrConfig.java
-E:\ownproject\moreModule\web\src\main\java\com\founder\WebApplication.java
-E:\ownproject\moreModule\web\src\main\java\com\founder\redis\CacheConfiguration.java
-E:\ownproject\moreModule\web\src\main\java\com\founder\swagger2\SwaggerConfig.java
-E:\ownproject\moreModule\web\src\main\java\com\founder\interceptor\SessionConfiguration.java
-E:\ownproject\moreModule\web\src\main\java\com\founder\interceptor\FastJsonConfiguration.java
+E:\workspace\moreModule\web\src\main\java\com\founder\multidatasource\PrimaryDataSourceConfig.java
+E:\workspace\moreModule\web\src\main\java\com\founder\solr\SolrConfig.java
+E:\workspace\moreModule\web\src\main\java\com\founder\interceptor\SessionConfiguration.java
+E:\workspace\moreModule\web\src\main\java\com\founder\swagger2\SwaggerConfig.java
+E:\workspace\moreModule\web\src\main\java\com\founder\multidatasource\DataSourceConfig.java
+E:\workspace\moreModule\web\src\main\java\com\founder\ScheduledTasks\ScheduledTasks.java
+E:\workspace\moreModule\web\src\main\java\com\founder\WebApplication.java
+E:\workspace\moreModule\web\src\main\java\com\founder\redis\CacheConfiguration.java
+E:\workspace\moreModule\web\src\main\java\com\founder\interceptor\FastJsonConfiguration.java

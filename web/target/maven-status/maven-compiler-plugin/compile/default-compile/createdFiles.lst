@@ -1,9 +1,11 @@
+com\founder\multidatasource\DataSourceConfig.class
+com\founder\swagger2\SwaggerConfig.class
+com\founder\WebApplication.class
+com\founder\multidatasource\PrimaryDataSourceConfig.class
+com\founder\interceptor\SessionConfiguration$1.class
 com\founder\redis\CacheConfiguration.class
 com\founder\interceptor\SessionConfiguration$2.class
 com\founder\solr\SolrConfig.class
-com\founder\swagger2\SwaggerConfig.class
 com\founder\interceptor\SessionConfiguration.class
-com\founder\WebApplication.class
 com\founder\interceptor\FastJsonConfiguration.class
-com\founder\interceptor\SessionConfiguration$1.class
 com\founder\swagger2\SwaggerConfig$1.class
