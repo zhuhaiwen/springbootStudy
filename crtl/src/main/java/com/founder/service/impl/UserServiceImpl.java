@@ -4,6 +4,9 @@ import com.founder.dao.user.IUserDao;
 import com.founder.entity.user.TUserEntity;
 import com.founder.entity.user.TUserEntity_;
 import com.founder.service.IUserService;
+import com.founder.utils.globalexception.MyException;
+import com.founder.utils.token.TokenUtil;
+import com.google.common.cache.CacheBuilder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cache.annotation.CacheConfig;
@@ -14,14 +17,13 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import javax.annotation.PostConstruct;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Predicate;
 import javax.persistence.criteria.Root;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
+import java.util.concurrent.TimeUnit;
 
 /**
  * @author zhwen
@@ -42,6 +44,14 @@ public class UserServiceImpl implements IUserService {
     @Autowired(required = false)
     private RedisTemplate redisTemplate;
 
+    @PostConstruct
+    @Transactional
+    public void init() {
+        TokenUtil.loginUsers = CacheBuilder.newBuilder().maximumSize(100000).expireAfterAccess(604800, TimeUnit.SECONDS)
+                .build();
+    }
+
+    @Transactional
     @Override
     public TUserEntity saveUser(TUserEntity userEntity) {
         return userDao.save(userEntity);
@@ -77,6 +87,9 @@ public class UserServiceImpl implements IUserService {
         if (flag) {
             map.put("user", user);
             map.put("success", 1);
+            String token = UUID.randomUUID().toString();
+            TokenUtil.loginUsers.put(token, user);
+            map.put("token", token);
             return map;
         }
         else {
@@ -102,6 +115,7 @@ public class UserServiceImpl implements IUserService {
         return userDao.findByName(name, pageable);
     }
 
+    @Transactional
     @Override
     public void clearCache(String param) {
         if (!"REDIS".equalsIgnoreCase(cacheType)) {
@@ -111,5 +125,15 @@ public class UserServiceImpl implements IUserService {
             Set userCache = redisTemplate.keys("USER*");
             redisTemplate.delete(userCache);
         }
+    }
+
+    @Override
+    public TUserEntity getLoginUserFromToken(String token) throws MyException {
+        TUserEntity userEntity = (TUserEntity) TokenUtil.loginUsers.getIfPresent(token);
+        if (userEntity == null) {
+            throw new MyException("用户未登录");
+        }
+        userEntity.setPwd("******");
+        return userEntity;
     }
 }

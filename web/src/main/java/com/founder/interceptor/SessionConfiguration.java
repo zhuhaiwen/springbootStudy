@@ -4,8 +4,14 @@ import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.serializer.SerializerFeature;
 import com.founder.dao.log.TLogDao;
 import com.founder.entity.log.TLoggerInfosEntity;
+import com.founder.entity.user.TUserEntity;
+import com.founder.service.IUserService;
 import com.founder.utils.DaoHelper;
 import com.founder.utils.IpHelper;
+import com.founder.utils.token.TokenUtil;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
@@ -25,11 +31,16 @@ import javax.servlet.http.HttpServletResponse;
 @Configuration
 public class SessionConfiguration extends WebMvcConfigurerAdapter {
 
+    private static Logger logger = LoggerFactory.getLogger(SessionConfiguration.class);
+
     // 请求开始时间标识
     private static final String LOGGER_SEND_TIME = "SEND_TIME";
 
     // 请求日志实体标识
     private static final String LOGGER_ENTITY = "LOGGER_ENTITY";
+
+    @Autowired
+    private IUserService userService;
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
@@ -42,9 +53,13 @@ public class SessionConfiguration extends WebMvcConfigurerAdapter {
                         httpServletRequest.getRequestURI().equals("/user/login")) {
                     return true;
                 }
-                // 验证session是否存在
-                Object obj = httpServletRequest.getSession().getAttribute("userInfo");
-                if (obj == null) {
+                // 验证用户是否已经登录
+//                Object obj = httpServletRequest.getSession().getAttribute("userInfo");
+                String requestUrl = httpServletRequest.getRequestURI();
+                String token = TokenUtil.getToken();
+                TUserEntity userEntity = userService.getLoginUserFromToken(token);
+                if (userEntity == null) {
+                    logger.info("用户未登录, [url = " + requestUrl + "]");
                     httpServletResponse.sendRedirect("/user/login_view");
                     return false;
                 }

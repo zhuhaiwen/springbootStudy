@@ -1,6 +1,7 @@
 package com.founder.service;
 
 import com.founder.entity.user.TUserEntity;
+import com.founder.utils.globalexception.MyException;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
@@ -59,4 +60,11 @@ public interface IUserService {
      */
     public void clearCache (String param);
 
+    /**
+     * 依据token判断用户是否登录
+     *
+     * @param token
+     * @return
+     */
+    public TUserEntity getLoginUserFromToken (String token) throws MyException;
 }
