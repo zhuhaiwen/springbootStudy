@@ -34,4 +34,6 @@ public interface IUserDao extends JpaRepository<TUserEntity, Integer>,
         void deleteUserByNameAndPwd (String name, String pwd);
 
         Page<TUserEntity> findByName (String name, Pageable pageable);
+
+        TUserEntity findByName (String name);
 }

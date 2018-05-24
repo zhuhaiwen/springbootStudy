@@ -83,9 +83,21 @@ public class UserApi  {
         return Collections.emptyMap();
     }
 
-    @ApiOperation(value = "用户登录", notes = "用户登录并且生成token返回")
+    @ApiOperation(value = "用户登录", notes = "用户登录并且生成token返回(没有springsecurity)")
     @RequestMapping(value = "/loginByToken", method = RequestMethod.POST)
     public String login(@RequestBody TUserEntity tUserEntity) {
+        Map<String ,Object> result = userService.login(tUserEntity);
+        if (result.get("success").equals(1)) {
+            String jwtToken = Jwts.builder().setSubject(tUserEntity.getName()).claim("roles","member")
+                    .signWith(SignatureAlgorithm.HS256,"secretKey").compact();
+            return jwtToken;
+        }
+        return "";
+    }
+
+    @ApiOperation(value = "用户登录", notes = "用户登录并且生成token返回(没有springsecurity)")
+    @RequestMapping(value = "/loginByJwt", method = RequestMethod.POST)
+    public String loginByJwt(@RequestBody TUserEntity tUserEntity) {
         Map<String ,Object> result = userService.login(tUserEntity);
         if (result.get("success").equals(1)) {
             String jwtToken = Jwts.builder().setSubject(tUserEntity.getName()).claim("roles","member")
