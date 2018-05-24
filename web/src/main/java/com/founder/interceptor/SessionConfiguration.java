@@ -4,11 +4,11 @@ import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.serializer.SerializerFeature;
 import com.founder.dao.log.TLogDao;
 import com.founder.entity.log.TLoggerInfosEntity;
-import com.founder.entity.user.TUserEntity;
 import com.founder.service.IUserService;
 import com.founder.utils.DaoHelper;
 import com.founder.utils.IpHelper;
-import com.founder.utils.token.TokenUtil;
+import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.Jwts;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +19,7 @@ import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
+import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -50,20 +51,38 @@ public class SessionConfiguration extends WebMvcConfigurerAdapter {
             public boolean preHandle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object o) throws Exception {
                 // 登录不做拦截
                 if (httpServletRequest.getRequestURI().equals("/user/login_view") ||
-                        httpServletRequest.getRequestURI().equals("/user/login")) {
+                        httpServletRequest.getRequestURI().equals("/user/login") || httpServletRequest.getRequestURI().equals("/api/user/loginByToken") || httpServletRequest.getRequestURI().equals("/error")) {
+                    // 只有用户登录的接口不被拦截,其它接口都需要被拦截
                     return true;
                 }
                 // 验证用户是否已经登录
-//                Object obj = httpServletRequest.getSession().getAttribute("userInfo");
-                String requestUrl = httpServletRequest.getRequestURI();
+                // =========使用伪token验证开始=========
+                /*String requestUrl = httpServletRequest.getRequestURI();
                 String token = TokenUtil.getToken();
                 TUserEntity userEntity = userService.getLoginUserFromToken(token);
                 if (userEntity == null) {
                     logger.info("用户未登录, [url = " + requestUrl + "]");
                     httpServletResponse.sendRedirect("/user/login_view");
                     return false;
+                }*/
+                // =========使用伪token验证结束=========
+                // =========使用jwt验证开始=============
+                String authHeader = httpServletRequest.getHeader("authorization");
+                if("OPTIONS".equals(httpServletRequest.getMethod())) {
+                    httpServletResponse.setStatus(HttpServletResponse.SC_OK); // 返回200
+                    return true;
                 }
-                return true;
+                else { // 其它方法需要被JWT验证
+                    if(authHeader == null || !authHeader.startsWith("Bearer ")) {
+                        throw new ServletException("Missing or invalid Authorization header");
+                    }
+                    // 从authorization中拿出token
+                    String token = authHeader.substring(7);
+                    Claims claims = Jwts.parser().setSigningKey("secretKey").parseClaimsJws(token).getBody();
+                    httpServletRequest.setAttribute("claims", claims);
+                    return true;
+                }
+                // =========使用jwt验证结束=============
             }
 
             @Override

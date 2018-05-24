@@ -5,6 +5,8 @@ import com.founder.entity.user.TUserEntity;
 import com.founder.service.IUserService;
 import com.founder.utils.solr.doc.QueryDoc;
 import com.founder.utils.solr.service.ISolrService;
+import io.jsonwebtoken.Jwts;
+import io.jsonwebtoken.SignatureAlgorithm;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
@@ -15,11 +17,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.MediaType;
-import org.springframework.security.authentication.encoding.Md5PasswordEncoder;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
 import java.util.*;
@@ -83,5 +81,17 @@ public class UserApi  {
             return result;
         }
         return Collections.emptyMap();
+    }
+
+    @ApiOperation(value = "用户登录", notes = "用户登录并且生成token返回")
+    @RequestMapping(value = "/loginByToken", method = RequestMethod.POST)
+    public String login(@RequestBody TUserEntity tUserEntity) {
+        Map<String ,Object> result = userService.login(tUserEntity);
+        if (result.get("success").equals(1)) {
+            String jwtToken = Jwts.builder().setSubject(tUserEntity.getName()).claim("roles","member")
+                    .signWith(SignatureAlgorithm.HS256,"secretKey").compact();
+            return jwtToken;
+        }
+        return "";
     }
 }
