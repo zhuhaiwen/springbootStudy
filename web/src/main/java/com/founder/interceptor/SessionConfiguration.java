@@ -12,7 +12,6 @@ import io.jsonwebtoken.Jwts;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
@@ -29,7 +28,7 @@ import javax.servlet.http.HttpServletResponse;
  * @company 北大方正电子
  * @date 2017-11-18 17:43
  **/
-@Configuration
+//@Configuration
 public class SessionConfiguration extends WebMvcConfigurerAdapter {
 
     private static Logger logger = LoggerFactory.getLogger(SessionConfiguration.class);
