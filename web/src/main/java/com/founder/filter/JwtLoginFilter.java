@@ -51,7 +51,7 @@ public class JwtLoginFilter extends UsernamePasswordAuthenticationFilter {
 
             return new UsernamePasswordAuthenticationToken(username,
                     password,
-                    new ArrayList<>());
+                    new ArrayList<>()); // 封装成UsernamePasswordAuthenticationToken,登录时传过来什么样,就是什么样
         }
         catch (Exception e) {
             throw new RuntimeException(e);

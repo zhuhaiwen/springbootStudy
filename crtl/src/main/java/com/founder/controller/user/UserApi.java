@@ -83,8 +83,14 @@ public class UserApi  {
         return Collections.emptyMap();
     }
 
+    @ApiOperation(value = "查询所有用户", notes = "从数据库里查询所有用户")
+    @RequestMapping(value = "/listAllUsers", method = RequestMethod.GET)
+    public List<TUserEntity> listAllUsers () {
+        return userService.listAllUsers();
+    }
+
     @ApiOperation(value = "用户登录", notes = "用户登录并且生成token返回(没有springsecurity)")
-    @RequestMapping(value = "/loginByToken", method = RequestMethod.POST)
+    @RequestMapping(value = "/userLogin", method = RequestMethod.POST)
     public String login(@RequestBody TUserEntity tUserEntity) {
         Map<String ,Object> result = userService.login(tUserEntity);
         if (result.get("success").equals(1)) {
@@ -95,15 +101,4 @@ public class UserApi  {
         return "";
     }
 
-    @ApiOperation(value = "用户登录", notes = "用户登录并且生成token返回(没有springsecurity)")
-    @RequestMapping(value = "/loginByJwt", method = RequestMethod.POST)
-    public String loginByJwt(@RequestBody TUserEntity tUserEntity) {
-        Map<String ,Object> result = userService.login(tUserEntity);
-        if (result.get("success").equals(1)) {
-            String jwtToken = Jwts.builder().setSubject(tUserEntity.getName()).claim("roles","member")
-                    .signWith(SignatureAlgorithm.HS256,"secretKey").compact();
-            return jwtToken;
-        }
-        return "";
-    }
 }

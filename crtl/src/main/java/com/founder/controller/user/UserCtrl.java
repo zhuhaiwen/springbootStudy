@@ -2,7 +2,6 @@ package com.founder.controller.user;
 
 import com.founder.entity.user.TUserEntity;
 import com.founder.service.IUserService;
-import com.founder.utils.token.TokenUtil;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.slf4j.Logger;
@@ -10,13 +9,14 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.List;
-import java.util.Map;
 
 /**
  * @author zhwen
@@ -26,7 +26,7 @@ import java.util.Map;
  **/
 @Controller
 @RequestMapping(value = "/user", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-@Api(description = "用户操作")
+@Api(description = "用户登录操作")
 public class UserCtrl {
 
     private final static Logger logger = LoggerFactory.getLogger(UserCtrl.class);
@@ -34,13 +34,7 @@ public class UserCtrl {
     @Autowired
     private IUserService userService;
 
-    @ApiOperation(value = "查询所有用户", notes = "从数据库里查询所有用户")
-    @RequestMapping(value = "/listAllUsers", method = RequestMethod.GET)
-    public List<TUserEntity> listAllUsers () {
-        return userService.listAllUsers();
-    }
-
-    @ApiOperation(value = "用户登陆", notes = "用户登录系统")
+    /*@ApiOperation(value = "用户登陆", notes = "用户登录系统")
     @RequestMapping(value = "/login", method = RequestMethod.GET)
     public String userLogin (TUserEntity userEntity, HttpServletRequest request) throws IOException {
         // 根据用户名查询用户是否存在
@@ -63,5 +57,17 @@ public class UserCtrl {
     @RequestMapping(value = "/index", method = RequestMethod.GET)
     public String loginSuccess (TUserEntity userEntity, HttpServletRequest request) {
         return "success";
+    }*/
+
+    @ApiOperation(value = "用户登陆", notes = "用户登录系统并生成token")
+    @RequestMapping(value = "/userLogin", method = RequestMethod.POST)
+    public void login (@RequestBody TUserEntity userEntity, HttpServletRequest request, HttpServletResponse response) {
+        try {
+            request.getRequestDispatcher("/login?username=" + userEntity.getName() + "&password=" + userEntity.getPwd()).forward(request, response);
+        } catch (ServletException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

@@ -5,12 +5,17 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import springfox.documentation.RequestHandler;
 import springfox.documentation.builders.ApiInfoBuilder;
+import springfox.documentation.builders.ParameterBuilder;
+import springfox.documentation.schema.ModelRef;
 import springfox.documentation.service.ApiInfo;
 import springfox.documentation.service.Contact;
+import springfox.documentation.service.Parameter;
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.function.Predicate;
 
 /**
@@ -44,11 +49,13 @@ public class SwaggerConfig {
             }
         };
 
+        // swagger配置token,访问才可以请求的通
+        ParameterBuilder token = new ParameterBuilder();
+        List<Parameter> parameters = new ArrayList<>();
+        token.name("token").description("令牌").modelRef(new ModelRef("string")).parameterType("header").required(false).build();
+        parameters.add(token.build());
         return new Docket(DocumentationType.SWAGGER_2)
-                .apiInfo(apiInfo())
-                /*.select()
-                .apis(RequestHandlerSelectors.basePackage("con.founder.controller.*.*"))
-                .paths(PathSelectors.any())
-                .build()*/;
+                .globalOperationParameters(parameters)
+                .apiInfo(apiInfo());
     }
 }
