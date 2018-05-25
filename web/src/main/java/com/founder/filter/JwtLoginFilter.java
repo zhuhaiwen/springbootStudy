@@ -49,9 +49,11 @@ public class JwtLoginFilter extends UsernamePasswordAuthenticationFilter {
             password = password == null? "" : password;
             username = username.trim();
 
-            return new UsernamePasswordAuthenticationToken(username,
+            UsernamePasswordAuthenticationToken token = new UsernamePasswordAuthenticationToken(username,
                     password,
-                    new ArrayList<>()); // 封装成UsernamePasswordAuthenticationToken,登录时传过来什么样,就是什么样
+                    new ArrayList<>());
+
+            return authenticationManager.authenticate(token);
         }
         catch (Exception e) {
             throw new RuntimeException(e);
