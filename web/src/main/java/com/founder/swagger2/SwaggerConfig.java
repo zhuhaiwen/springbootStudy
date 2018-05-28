@@ -39,7 +39,6 @@ public class SwaggerConfig {
 
     @Bean
     public Docket createRestApi() {
-
         Predicate<RequestHandler> predicate = new Predicate<RequestHandler>() {
             @Override
             public boolean test(RequestHandler requestHandler) {
@@ -49,18 +48,36 @@ public class SwaggerConfig {
                 return true;
             }
         };
-
-        // swagger配置token,访问才可以请求的通
+        // swagger配置token,访问才可以请求的通(每一个方法都需要添加token参数,现已改成全局token的方式)
         ParameterBuilder token = new ParameterBuilder();
         List<Parameter> parameters = new ArrayList<>();
         token.name("token").description("令牌").modelRef(new ModelRef("string")).parameterType("header").required(false).build();
         parameters.add(token.build());
+        //
         return new Docket(DocumentationType.SWAGGER_2)
 //                .globalOperationParameters(parameters)
+                .groupName("first API")
                 .securitySchemes(securitySchemes())
-                .apiInfo(apiInfo());
+                .apiInfo(apiInfo())
+                .select()
+                // TODO 这里面如果有多个路径过滤这样写就会报错，页面上是不显示的，需要换一种写法(Docket不能自动注入)
+//                .paths(PathSelectors.ant("/api/**"))
+//                .paths(PathSelectors.ant("/user/**"))
+                .build();
     }
 
+    // TODO 所谓的分组就是生成多个Docket, 每一个docket的配置一个apiinfo，根据paths()来区分，后续有时间改成工具类的形式
+//    @Bean
+//    public Docket secondRestApi(){
+//        return new Docket(DocumentationType.SWAGGER_2)
+//                .groupName("second API")
+//                .securitySchemes(securitySchemes())
+//                .apiInfo(apiInfo())
+//                .select()
+//                .paths(PathSelectors.ant("/secondApi/**"))
+//                .paths(PathSelectors.ant("/secondUser"))
+//                .build();
+//    }
     private List<ApiKey> securitySchemes(){
         List<ApiKey> securitySchemes = new ArrayList<>();
         ApiKey headKey = new ApiKey("token","token","header");
