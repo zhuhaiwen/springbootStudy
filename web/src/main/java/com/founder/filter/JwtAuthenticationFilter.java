@@ -4,6 +4,7 @@ import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.web.authentication.www.BasicAuthenticationFilter;
@@ -29,6 +30,10 @@ public class JwtAuthenticationFilter extends BasicAuthenticationFilter {
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain chain) throws IOException, ServletException {
 
+        Authentication hasAuthentication = SecurityContextHolder.getContext().getAuthentication();
+        if (hasAuthentication != null && hasAuthentication.isAuthenticated() == true) {
+            SecurityContextHolder.getContext().setAuthentication(null);
+        }
         String header = request.getHeader("token");
 
         if (header == null || !header.startsWith("Bearer ")) {

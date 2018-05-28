@@ -8,6 +8,7 @@ import springfox.documentation.builders.ApiInfoBuilder;
 import springfox.documentation.builders.ParameterBuilder;
 import springfox.documentation.schema.ModelRef;
 import springfox.documentation.service.ApiInfo;
+import springfox.documentation.service.ApiKey;
 import springfox.documentation.service.Contact;
 import springfox.documentation.service.Parameter;
 import springfox.documentation.spi.DocumentationType;
@@ -55,7 +56,15 @@ public class SwaggerConfig {
         token.name("token").description("令牌").modelRef(new ModelRef("string")).parameterType("header").required(false).build();
         parameters.add(token.build());
         return new Docket(DocumentationType.SWAGGER_2)
-                .globalOperationParameters(parameters)
+//                .globalOperationParameters(parameters)
+                .securitySchemes(securitySchemes())
                 .apiInfo(apiInfo());
+    }
+
+    private List<ApiKey> securitySchemes(){
+        List<ApiKey> securitySchemes = new ArrayList<>();
+        ApiKey headKey = new ApiKey("token","token","header");
+        securitySchemes.add(headKey);
+        return securitySchemes;
     }
 }
