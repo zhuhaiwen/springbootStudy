@@ -1,6 +1,7 @@
 package com.founder.entity.user;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 /**
  * @author zhwen
@@ -10,7 +11,7 @@ import javax.persistence.*;
  **/
 @Entity
 @Table(name = "t_user")
-public class TUserEntity {
+public class TUserEntity implements Serializable{
     private int id;
     private String name;
     private Integer age;

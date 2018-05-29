@@ -1,6 +1,7 @@
 package com.founder.entity.commodity;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.math.BigDecimal;
 
 /**
@@ -11,7 +12,7 @@ import java.math.BigDecimal;
  **/
 @Entity
 @Table(name = "t_commodity")
-public class TCommodityEntity {
+public class TCommodityEntity implements Serializable {
     private int tId;
     private String tTitle;
     private BigDecimal tPrice;

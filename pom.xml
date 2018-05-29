@@ -226,13 +226,6 @@
                 <version>${jwt.version}</version>
             </dependency>
 
-            <!--FeignClient-->
-            <dependency>
-                <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-starter-feign</artifactId>
-                <version>${feignClient.version}</version>
-            </dependency>
-
         </dependencies>
     </dependencyManagement>
 
