@@ -4,6 +4,7 @@ import com.founder.dao.user.IUserDao;
 import com.founder.entity.user.TUserEntity;
 import com.founder.entity.user.TUserEntity_;
 import com.founder.service.IUserService;
+import com.founder.utils.amqp.sender.IndexSender;
 import com.founder.utils.globalexception.MyException;
 import com.founder.utils.token.TokenUtil;
 import com.google.common.cache.CacheBuilder;
@@ -44,6 +45,9 @@ public class UserServiceImpl implements IUserService {
     @Autowired(required = false)
     private RedisTemplate redisTemplate;
 
+    @Autowired
+    private IndexSender indexSender;
+
     @PostConstruct
     @Transactional
     public void init() {
@@ -59,7 +63,9 @@ public class UserServiceImpl implements IUserService {
 
     @Override
     public List<TUserEntity> listAllUsers() {
-        return userDao.findAll();
+        List<TUserEntity> allUsers = userDao.findAll();
+        indexSender.sendMag(allUsers);
+        return allUsers;
     }
 
     @Override
