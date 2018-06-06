@@ -2,8 +2,8 @@ package com.founder.controller.user;
 
 import com.founder.aop.Action;
 import com.founder.entity.user.TUserEntity;
+import com.founder.service.ILockService;
 import com.founder.service.IUserService;
-import com.founder.utils.solr.doc.QueryDoc;
 import com.founder.utils.solr.service.ISolrService;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
@@ -14,13 +14,17 @@ import org.apache.solr.client.solrj.SolrServerException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
-import java.util.*;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.UUID;
 
 /**
  * @author zhwen
@@ -41,8 +45,14 @@ public class UserApi  {
     @Autowired
     private ISolrService solrService;
 
+    @Autowired
+    private ILockService lockService;
+
+    @Value("${jedis.expireTime}")
+    private String lockExpireTime;
+
     @Action
-    @ApiOperation(value = "查询大于一定年龄的用户", notes = "查询大于一定年龄的用户")
+    @ApiOperation(value = "查询大于1一定年龄的用户", notes = "查询大于一定年龄的用户")
     @RequestMapping(value = "/getUsersByAge", method = RequestMethod.GET)
     public List<TUserEntity> getUsersByAge (@ApiParam(value = "用户年龄", required = true) @RequestParam("age") int age) {
         logger.info("已经进入查询方法");
@@ -61,26 +71,37 @@ public class UserApi  {
     @RequestMapping(value = "/add", method = RequestMethod.GET)
     public Map<String, Object> saveUser (TUserEntity user) throws IOException, SolrServerException {
         Map<String, Object> result = new HashMap<String, Object>();
-        TUserEntity userEntity = userService.saveUser(user);
-        if (userEntity != null) {
-            /*Map<String, Object> solrUser = new HashMap<String, Object>(); // 以map的形式插入索引库
-            solrUser.put("id", userEntity.getId());
-            solrUser.put("name", userEntity.getName());
-            solrUser.put("comment", userEntity.getAddress());
-            String msg = solrService.addQueryDoc(solrUser);*/
-            QueryDoc queryDoc = new QueryDoc();
-            queryDoc.setId(String.valueOf(userEntity.getId()));
-            queryDoc.setName(userEntity.getName());
-            queryDoc.setComment("他是个好汉");
-            Map<String, String> dynamicField = new HashMap<String, String>();
-            dynamicField.put(String.valueOf(new Random().nextInt(50)), queryDoc.getName());
-            queryDoc.setCATS(dynamicField);
-            solrService.saveQueryDocIndex(queryDoc);
-            result.put("success",1);
-//            result.put("solrMsg", msg);
+        result.put("code", "1");
+        String requestId =  UUID.randomUUID().toString(); // 模拟requestId,
+        boolean repeatUser = lockService.lock(user.getName(), requestId, Integer.parseInt(lockExpireTime));
+        logger.info("get lock = {}", repeatUser);
+        if (!repeatUser) {
+            result.put("code", "-1");
+             result.put("msg", "添加失败");
             return result;
         }
-        return Collections.emptyMap();
+        TUserEntity userEntity = userService.saveUser(user);
+//        if (userEntity != null) {
+//            /*Map<String, Object> solrUser = new HashMap<String, Object>(); // 以map的形式插入索引库
+//            solrUser.put("id", userEntity.getId());
+//            solrUser.put("name", userEntity.getName());
+//            solrUser.put("comment", userEntity.getAddress());
+//            String msg = solrService.addQueryDoc(solrUser);*/
+//            QueryDoc queryDoc = new QueryDoc();
+//            queryDoc.setId(String.valueOf(userEntity.getId()));
+//            queryDoc.setName(userEntity.getName());
+//            queryDoc.setComment("他是个好汉");
+//            Map<String, String> dynamicField = new HashMap<String, String>();
+//            dynamicField.put(String.valueOf(new Random().nextInt(50)), queryDoc.getName());
+//            queryDoc.setCATS(dynamicField);
+//            solrService.saveQueryDocIndex(queryDoc);
+//            result.put("success",1);
+////            result.put("solrMsg", msg);
+//            return result;
+//        }
+        lockService.unlock(userEntity.getName(), requestId);
+        result.put("msg", "添加成功");
+        return result;
     }
 
     @ApiOperation(value = "查询所有用户", notes = "从数据库里查询所有用户")
@@ -100,5 +121,4 @@ public class UserApi  {
         }
         return "";
     }
-
 }

@@ -79,3 +79,8 @@ logging:
 # 配置feignclient请求地址(测试本地发票)
 invoice:
   server: http://127.0.0.1:8888
+
+#分布式锁
+jedis:
+  expireTime: 10800 #3个小时
+
