@@ -73,14 +73,15 @@ public class UserApi  {
         Map<String, Object> result = new HashMap<String, Object>();
         result.put("code", "1");
         String requestId =  UUID.randomUUID().toString(); // 模拟requestId,
-        boolean repeatUser = lockService.lock(user.getName(), requestId, Integer.parseInt(lockExpireTime));
-        logger.info("get lock = {}", repeatUser);
-        if (!repeatUser) {
-            result.put("code", "-1");
-             result.put("msg", "添加失败");
-            return result;
-        }
+//        boolean repeatUser = lockService.lock(user.getName(), requestId, Integer.parseInt(lockExpireTime));
+//        logger.info("get lock = {}", repeatUser);
+//        if (!repeatUser) {
+//            result.put("code", "-1");
+//             result.put("msg", "添加失败");
+//            return result;
+//        }
         TUserEntity userEntity = userService.saveUser(user);
+         // TODO: 2018/6/11 solr检索,待开发
 //        if (userEntity != null) {
 //            /*Map<String, Object> solrUser = new HashMap<String, Object>(); // 以map的形式插入索引库
 //            solrUser.put("id", userEntity.getId());
@@ -99,7 +100,7 @@ public class UserApi  {
 ////            result.put("solrMsg", msg);
 //            return result;
 //        }
-        lockService.unlock(userEntity.getName(), requestId);
+//        lockService.unlock(userEntity.getName(), requestId);
         result.put("msg", "添加成功");
         return result;
     }
@@ -121,4 +122,6 @@ public class UserApi  {
         }
         return "";
     }
+
+
 }

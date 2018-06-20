@@ -83,4 +83,8 @@ invoice:
 #分布式锁
 jedis:
   expireTime: 10800 #3个小时
+#zookeeper
+zookeeper:
+  address: 172.16.30.78:2181
+  registry.cache.location:
 

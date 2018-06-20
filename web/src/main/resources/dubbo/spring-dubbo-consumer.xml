@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://code.alibabatech.com/schema/dubbo
+    http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+    <dubbo:registry protocol="zookeeper" address="${zookeeper.address}"  file="${zookeeper.registry.cache.location}"/>
+
+    <dubbo:consumer timeout="50000" check="false" />
+
+    <dubbo:application name="fms-invoice"/>
+    <!--直连我本机dubbo服务-->
+    <dubbo:reference check="false" id="invoiceService" interface="com.mryx.invoice.service.InvoiceService" url="dubbo://172.16.21.129:30888"/>
+</beans>

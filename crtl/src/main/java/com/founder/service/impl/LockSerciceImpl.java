@@ -51,8 +51,7 @@ public class LockSerciceImpl implements ILockService {
             jedis = jedisPool.getResource();
             String script = "if redis.call('get', KEYS[1]) == ARGV[1] then return redis.call('del', KEYS[1]) else return 0 end";
             Object result = jedis.eval(script, Collections.singletonList(lockKey), Collections.singletonList(requestId));
-            if ("0".equals(result)) {
-                jedis.close();
+            if ("1".equals(result)) {
                 return true;
             }
         }

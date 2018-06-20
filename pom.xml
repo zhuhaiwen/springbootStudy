@@ -44,6 +44,7 @@
         <jwt.version>0.6.0</jwt.version>
         <feignClient.version>1.3.0.RELEASE</feignClient.version>
         <jedis.version>2.9.0</jedis.version>
+        <invoice.version>0.0.1-SNAPSHOT</invoice.version>
     </properties>
 
     <dependencyManagement>
@@ -241,6 +242,12 @@
                 <version>${jedis.version}</version>
             </dependency>
 
+            <!--发票API-->
+            <dependency>
+                <groupId>com.mryx.invoice</groupId>
+                <artifactId>invoice-api</artifactId>
+                <version>${invoice.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 

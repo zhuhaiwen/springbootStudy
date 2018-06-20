@@ -8,6 +8,7 @@ import com.founder.utils.amqp.sender.IndexSender;
 import com.founder.utils.globalexception.MyException;
 import com.founder.utils.token.TokenUtil;
 import com.google.common.cache.CacheBuilder;
+import com.mryx.invoice.service.InvoiceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cache.annotation.CacheConfig;
@@ -48,6 +49,9 @@ public class UserServiceImpl implements IUserService {
     @Autowired
     private IndexSender indexSender;
 
+    @Autowired
+    private InvoiceService invoiceService;
+
     @PostConstruct
     @Transactional
     public void init() {
@@ -58,7 +62,22 @@ public class UserServiceImpl implements IUserService {
     @Transactional
     @Override
     public TUserEntity saveUser(TUserEntity userEntity) {
-        return userDao.save(userEntity);
+//        return userDao.save(userEntity);
+        return realSave(userEntity);
+    }
+
+    public TUserEntity realSave(TUserEntity userEntity) {
+        TUserEntity userEntity1 = userDao.save(userEntity);
+        if (userEntity1!=null) {
+            try {
+                invoiceService.getInvoicesByUserId(Long.valueOf("574"), -1, -1);
+            }
+            finally {
+                System.out.println("异常执行之前执行~~~~");
+            }
+
+        }
+        return userEntity1;
     }
 
     @Override
