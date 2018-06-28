@@ -6,7 +6,7 @@
 	<groupId>com.founder</groupId>
 	<artifactId>web</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 
 	<name>web</name>
 	<description>Demo project for Spring Boot</description>
@@ -111,6 +111,25 @@
 						</goals>
 					</execution>
 				</executions>
+			</plugin>
+
+			<!--制作docker镜像-->
+			<plugin>
+				<groupId>com.spotify</groupId>
+				<artifactId>docker-maven-plugin</artifactId>
+				<version>1.0.0</version>
+				<configuration>
+					<imageName>moreModule</imageName>
+					<dockerDirectory>${project.basedir}/src/main/docker</dockerDirectory>
+					<dockerHost>http://123.206.44.57:2400</dockerHost>
+					<resources>
+						<resource>
+							<targetPath>/</targetPath>
+							<directory>${project.build.directory}</directory>
+							<include>${project.build.finalName}.jar</include>
+						</resource>
+					</resources>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>

@@ -45,6 +45,12 @@
         <feignClient.version>1.3.0.RELEASE</feignClient.version>
         <jedis.version>2.9.0</jedis.version>
         <invoice.version>0.0.1-SNAPSHOT</invoice.version>
+        <!--<dockerRegistry>127.0.0.1:10000</dockerRegistry>-->
+        <dockerHost>http://123.206.44.57:2400</dockerHost>
+        <pushImage>true</pushImage>
+        <dockerImageName>mryx/${project.artifactId}:${project.version}</dockerImageName>
+        <dockerImageTags>${project.version}</dockerImageTags>
+        <ssh2.version>build210</ssh2.version>
     </properties>
 
     <dependencyManagement>
@@ -202,13 +208,6 @@
                 <version>${springboot.version}</version>
             </dependency>
 
-            <!-- spring security,主要用来做md5加密 -->
-           <!-- <dependency>
-                <groupId>org.springframework.security</groupId>
-                <artifactId>spring-security-core</artifactId>
-                <version>${spring.serurity.version}</version>
-            </dependency>-->
-
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-aop</artifactId>
@@ -242,12 +241,19 @@
                 <version>${jedis.version}</version>
             </dependency>
 
-            <!--发票API-->
+            <!-- https://mvnrepository.com/artifact/ch.ethz.ganymed/ganymed-ssh2 -->
             <dependency>
+                <groupId>ch.ethz.ganymed</groupId>
+                <artifactId>ganymed-ssh2</artifactId>
+                <version>${ssh2.version}</version>
+            </dependency>
+
+            <!--发票API 待开发-->
+            <!--<dependency>
                 <groupId>com.mryx.invoice</groupId>
                 <artifactId>invoice-api</artifactId>
                 <version>${invoice.version}</version>
-            </dependency>
+            </dependency>-->
         </dependencies>
     </dependencyManagement>
 

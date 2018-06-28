@@ -8,7 +8,6 @@ import com.founder.utils.amqp.sender.IndexSender;
 import com.founder.utils.globalexception.MyException;
 import com.founder.utils.token.TokenUtil;
 import com.google.common.cache.CacheBuilder;
-import com.mryx.invoice.service.InvoiceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cache.annotation.CacheConfig;
@@ -49,9 +48,6 @@ public class UserServiceImpl implements IUserService {
     @Autowired
     private IndexSender indexSender;
 
-    @Autowired
-    private InvoiceService invoiceService;
-
     @PostConstruct
     @Transactional
     public void init() {
@@ -62,11 +58,12 @@ public class UserServiceImpl implements IUserService {
     @Transactional
     @Override
     public TUserEntity saveUser(TUserEntity userEntity) {
-//        return userDao.save(userEntity);
-        return realSave(userEntity);
+        return userDao.save(userEntity);
+//        return realSave(userEntity);
     }
 
-    public TUserEntity realSave(TUserEntity userEntity) {
+    // 这段代码测试dubbo发生异常时,关系数据库事务进不进行回滚,事实证明是回滚的,异常不catch就行
+    /*public TUserEntity realSave(TUserEntity userEntity) {
         TUserEntity userEntity1 = userDao.save(userEntity);
         if (userEntity1!=null) {
             try {
@@ -78,7 +75,7 @@ public class UserServiceImpl implements IUserService {
 
         }
         return userEntity1;
-    }
+    }*/
 
     @Override
     public List<TUserEntity> listAllUsers() {

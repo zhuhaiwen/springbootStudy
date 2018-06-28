@@ -115,11 +115,11 @@
             <artifactId>jedis</artifactId>
         </dependency>
 
-        <!--发票API-->
-        <dependency>
+        <!--发票API 待开发-->
+        <!--<dependency>
             <groupId>com.mryx.invoice</groupId>
             <artifactId>invoice-api</artifactId>
-        </dependency>
+        </dependency>-->
 
         <!-- dubbo start -->
         <dependency>
@@ -175,7 +175,14 @@
                     </execution>
                 </executions>
             </plugin>
-
+            <plugin>
+                <groupId>com.spotify</groupId>
+                <artifactId>docker-maven-plugin</artifactId>
+                <version>0.4.3</version>
+                <configuration>
+                    <skipDockerBuild>true</skipDockerBuild>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 </project>

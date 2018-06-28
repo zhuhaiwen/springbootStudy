@@ -12,5 +12,5 @@
 
     <dubbo:application name="fms-invoice"/>
     <!--直连我本机dubbo服务-->
-    <dubbo:reference check="false" id="invoiceService" interface="com.mryx.invoice.service.InvoiceService" url="dubbo://172.16.21.129:30888"/>
+    <!--<dubbo:reference check="false" id="invoiceService" interface="com.mryx.invoice.service.InvoiceService" url="dubbo://172.16.21.129:30888"/>-->
 </beans>
