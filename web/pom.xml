@@ -119,9 +119,10 @@
 				<artifactId>docker-maven-plugin</artifactId>
 				<version>1.0.0</version>
 				<configuration>
+					<dockerHost>http://123.206.44.57:2375/</dockerHost>
 					<imageName>moreModule</imageName>
 					<dockerDirectory>${project.basedir}/src/main/docker</dockerDirectory>
-					<dockerHost>http://123.206.44.57:2400</dockerHost>
+					<!--<dockerCertPath>/Users/Administrator/.docker/machine/machines/default</dockerCertPath>-->
 					<resources>
 						<resource>
 							<targetPath>/</targetPath>

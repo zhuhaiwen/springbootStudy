@@ -46,10 +46,10 @@
         <jedis.version>2.9.0</jedis.version>
         <invoice.version>0.0.1-SNAPSHOT</invoice.version>
         <!--<dockerRegistry>127.0.0.1:10000</dockerRegistry>-->
-        <dockerHost>http://123.206.44.57:2400</dockerHost>
-        <pushImage>true</pushImage>
+        <dockerHost>http://123.206.44.57:2375</dockerHost>
+        <!--<pushImage>true</pushImage>
         <dockerImageName>mryx/${project.artifactId}:${project.version}</dockerImageName>
-        <dockerImageTags>${project.version}</dockerImageTags>
+        <dockerImageTags>${project.version}</dockerImageTags>-->
         <ssh2.version>build210</ssh2.version>
     </properties>
 

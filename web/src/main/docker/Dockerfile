@@ -1,4 +1,5 @@
 FROM java:8
-ADD moreModule*.jar /data/app/app.jar
+VOLUME /tmp
+ADD moreModule.jar app.jar
 RUN bash -c 'touch /app.jar'
-ENTRYPOINT ["java", "-jar", "app.jar"]
+ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom", "-jar", "app.jar"]
