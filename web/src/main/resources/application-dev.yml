@@ -24,12 +24,12 @@ spring:
       suffix: .jsp
   datasource: # 配置多个数据源，首先下面是第一个数据源
     primary: # 首先是第一个数据眼
-      url: jdbc:mysql://123.206.44.57:3306/localstudy?characterEncoding=UTF-8
+      url: jdbc:mysql://172.21.0.5:3306/localstudy?characterEncoding=UTF-8
       driver-class-name: com.mysql.jdbc.Driver
       username: root
       password: root
     secondary: #其次是第二个数据源
-      url: jdbc:mysql://123.206.44.57:3306/localstudy_bak?characterEncoding=UTF-8 # 配置第二个数据源的url
+      url: jdbc:mysql://172.21.0.5:3306/localstudy_bak?characterEncoding=UTF-8 # 配置第二个数据源的url
       driver-class-name: com.mysql.jdbc.Driver # 配置第二个数据源的driverclassname
       username: root # 用户名
       password: root # 密码
