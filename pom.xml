@@ -154,11 +154,11 @@
             </dependency>
 
             <!--flyway 数据库管理工具-->
-            <!--<dependency>
+            <dependency>
                 <groupId>org.flywaydb</groupId>
                 <artifactId>flyway-core</artifactId>
                 <version>${flyway.version}</version>
-            </dependency>-->
+            </dependency>
 
             <!--Querydsl-->
             <dependency>
@@ -286,7 +286,7 @@
             </properties>
         </profile>
     </profiles>
-    <!--<build>
+    <build>
         <pluginManagement>
             <plugins>
                 <plugin>
@@ -296,5 +296,5 @@
                 </plugin>
             </plugins>
         </pluginManagement>
-    </build>-->
+    </build>
 </project>
