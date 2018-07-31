@@ -58,8 +58,19 @@ public class UserServiceImpl implements IUserService {
     @Transactional
     @Override
     public TUserEntity saveUser(TUserEntity userEntity) {
-        return userDao.save(userEntity);
+//        TUserEntity user = userDao.save(userEntity);
+//        int i = 1/0;
+//        return user;
+//        return userDao.save(userEntity);
 //        return realSave(userEntity);
+        return realSave(userEntity);
+    }
+
+    @Transactional
+    public TUserEntity realSave (TUserEntity userEntity) {
+        TUserEntity user = userDao.save(userEntity);
+        int i = 1/0;
+        return user;
     }
 
     // 这段代码测试dubbo发生异常时,关系数据库事务进不进行回滚,事实证明是回滚的,异常不catch就行

@@ -24,7 +24,6 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.UUID;
 
 /**
  * @author zhwen
@@ -72,12 +71,12 @@ public class UserApi  {
     public Map<String, Object> saveUser (TUserEntity user) throws IOException, SolrServerException {
         Map<String, Object> result = new HashMap<String, Object>();
         result.put("code", "1");
-        String requestId =  UUID.randomUUID().toString(); // 模拟requestId,
+//        String requestId =  UUID.randomUUID().toString(); // 模拟requestId,
 //        boolean repeatUser = lockService.lock(user.getName(), requestId, Integer.parseInt(lockExpireTime));
 //        logger.info("get lock = {}", repeatUser);
 //        if (!repeatUser) {
 //            result.put("code", "-1");
-//             result.put("msg", "添加失败");
+//            result.put("msg", "添加失败");
 //            return result;
 //        }
         TUserEntity userEntity = userService.saveUser(user);
@@ -97,11 +96,12 @@ public class UserApi  {
 //            queryDoc.setCATS(dynamicField);
 //            solrService.saveQueryDocIndex(queryDoc);
 //            result.put("success",1);
-////            result.put("solrMsg", msg);
+//            result.put("solrMsg", msg);
 //            return result;
 //        }
 //        lockService.unlock(userEntity.getName(), requestId);
         result.put("msg", "添加成功");
+        result.put("userEntity", userEntity);
         return result;
     }
 
